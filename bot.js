@@ -43,7 +43,11 @@ function onMessageHandler (target, context, msg, self) {
     client.say(target, `You rolled a ${num}`);
     console.log(`* Executed ${commandName} command`);
   } else if (commandName === '!deaths') {
-    client.say(target, `${context.username} has died ${deathCount} times`);
+    if (deathCount == 1) {
+      client.say(target, `${context.username} has died ${deathCount} time`);
+    } else {
+      client.say(target, `${context.username} has died ${deathCount} times`);
+    }
     console.log(`* Executed ${commandName} command`);
   } else if (commandName === '!deathadd') {
     deathCount += 1
