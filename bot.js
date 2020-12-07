@@ -12,6 +12,7 @@ const opts = {
   ]
 };
 
+
 // Create a client with our options
 const client = new tmi.client(opts);
 
@@ -33,7 +34,8 @@ function onMessageHandler (target, context, msg, self) {
 
   // Replace multiple whitespaces, tabs, newlines with single white space
   msg = msg.replace(/\s\s+/g, ' ');
-  const commandName = msg.substr(0, msg.indexOf(' '));
+  
+  const commandName = msg.split(' ')[0]
 
   // If the command is known, let's execute it
   if (commandName === '!dice') {
