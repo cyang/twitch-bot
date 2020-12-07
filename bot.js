@@ -44,9 +44,9 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`* Executed ${commandName} command`);
   } else if (commandName === '!deaths') {
     if (deathCount == 1) {
-      client.say(target, `${context.username} has died ${deathCount} time`);
+      client.say(target, `Died ${deathCount} time`);
     } else {
-      client.say(target, `${context.username} has died ${deathCount} times`);
+      client.say(target, `Died ${deathCount} times`);
     }
     console.log(`* Executed ${commandName} command`);
   } else if (commandName === '!deathadd') {
